@@ -1201,10 +1201,13 @@
 
     // Add an event listener to the button to toggle the content
     collapsible.addEventListener('click', function() {
+      this.classList.toggle("active");
       if (content.style.display === 'block') {
         content.style.display = 'none';
+        this.innerHTML = "Click to show videos";
       } else {
         content.style.display = 'block';
+        this.innerHTML = "Click to hide videos";
         
         // Find all the video elements within the content
         const videos = content.querySelectorAll('video');
